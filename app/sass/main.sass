@@ -1,0 +1,438 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	background-color: #000
+	input, textarea
+		color: #ffffff
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1,h2,h3,h4,h5,h6,p,ul
+	color: $text 
+	margin: 0
+	padding: 0
+
+li 
+	list-style-type: none
+	margin: 0
+a 
+	color: #ffffff
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		color: #ffffff
+
+
+.wrapper 
+	padding: 0 em(60px)
+
+.overlay
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	bottom: 0
+	background-color: #000
+
+
+/* -----------HEADER--------- */
+.d-info
+	margin: 0
+	padding: em(30px) 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&_about
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		.h1
+			margin-right: em(10px)
+			text-transform: uppercase
+		.retoucher
+			margin-right: em(55px)
+			font-size: em(20px)
+			padding-bottom: em(3.6px)
+			text-transform: uppercase
+			background: linear-gradient( #ffffff, #9d40bf);
+			color: transparent
+			-webkit-background-clip: text
+		.be 
+			margin-right: em(13px)
+			padding-bottom: em(3.6px)
+			font-size: em(20px)
+		a 
+			padding-bottom: em(6px)
+			i 
+				color: #ffffff
+				font-size: em(20px)
+	&_nav
+		nav 
+			padding-top: em(9px)
+			ul 
+				display: flex
+				justify-content: center
+				align-items: center
+				li 
+					margin-left: em(15px)
+					a 
+						padding: 8px 10px
+						text-transform: uppercase
+						font-size: 20px
+						transition: background-color 0.3s ease
+						&:hover
+							background-color: $accent
+							transition: background-color 0.3s ease
+
+/* -------FOTORAMA-------- */
+.fotorama__nav
+	&-wrap
+		position: relative
+		bottom: 80px
+		width: 100%
+		padding-right: 20px
+.fotorama__nav__frame
+	margin-right: 20px
+.fotorama__thumb-border
+	border: none
+.fotorama__arr
+	&--prev, &--next
+		&:before 
+			font-family: fontawesome
+			font-size: 32px
+			position: absolute		
+			width: 40px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			transition: background-color 0.3s ease
+		&:hover
+			&:before
+				background-color: $accent
+				transition: background-color 0.3s ease
+	&--next
+		&:before
+			content: '\f105'
+			right: 0
+	&--prev
+		&:before
+			content: '\f104'
+			left: 0
+
+.s
+	&-gallery
+		margin-bottom: 40px
+	&-reviews
+		.review
+			background-image: url("../img/review_bg.png");
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center center
+			margin-bottom: em(45px)
+			display: inline-block
+			p 
+				font-size: em(20px)
+				text-transform: uppercase
+				letter-spacing: 2px
+				padding: 20px
+		.comments
+			font-family: oswaldLight
+			margin-bottom: em(20px)
+			display: flex
+			flex-wrap: wrap
+			&_div				
+				width: 50%
+				transition: all 0.3s ease
+				margin-bottom: 40px
+				display: none
+				&:hover
+					box-shadow: 8px 8px 40px rgba(155, 63, 189, .6)
+					transition: all 0.3s ease
+				.quots
+					position: relative
+					&:before 
+						content: '\f10d'
+						font-family: fontawesome
+						position: absolute
+						top: em(-10px)
+						right: em(30px)
+				.text
+					padding: 30px
+				.info
+					display: flex
+					justify-content: flex-end
+					padding: 0 30px 30px 0
+					#name
+						padding-right: 5px
+						position: relative
+						&:after
+							position: absolute
+							content: ''
+							width: 1px
+							height: 100%
+							background-color: #fff
+							top: 0
+							right: 0
+					#e-mail
+						padding-left: 5px
+			.more 
+				margin: 30px auto
+				#more_reviews
+					text-transform: uppercase
+					font-size: em(30px)
+					position: relative
+					&:after
+						content: ''
+						position: absolute
+						width: 30%
+						height: 2px
+						background-color: $accent
+						bottom: 0
+						left: 35%
+					&:before
+						content: '\f054'
+						font-family: fontawesome
+						color: rgba(#ffffff, .7)
+						position: absolute
+						right: -30px
+						top: 25%
+						font-size: 16px
+						transform: rotate(90deg)
+
+/* ---------- ABOUT -------------- */
+.about
+	background-image: url("../img/review_bg.png");
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center center
+	margin-bottom: em(45px)
+	display: inline-block
+	p 
+		font-size: em(20px)
+		text-transform: uppercase
+		letter-spacing: 2px
+		padding: 20px
+.about-info
+	font-family: oswaldRegular
+	margin: 80px auto
+	width: 50%
+	p 
+		margin-bottom: 20px
+
+
+/* -------CONTACT-------- */
+.s-contacts
+	display: flex
+	margin: em(60px) em(60px) em(100px) em(60px)
+	align-items: flex-start
+	justify-content: flex-start
+	font-family: oswaldRegular
+	.send_me
+		width: 50%
+		margin-right: em(40px)
+		.send
+			text-transform: uppercase
+			font-size: em(20px)
+			margin-bottom: 10px
+		form 
+			display: flex
+			flex-direction: column
+			width: 336px
+			input
+				margin-bottom: 10px
+				border: none
+				padding: 10px
+				background-color: $input_color
+				text-transform: uppercase
+				font-size: em(14px)
+				font-family: oswaldRegular
+			textarea
+				border: none
+				padding: 10px
+				background-color: $input_color
+				text-transform: uppercase
+				font-size: em(14px)
+				font-family: oswaldRegular
+			button 
+				margin-top: 10px
+				padding: 10px 40px
+				text-align: center
+				border: 1px solid #ffffff
+				background-color: transparent
+				color: #ffffff
+				font-size: 16px
+				text-transform: uppercase
+	.contact_me
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		.contact
+			text-transform: uppercase
+			font-size: em(20px)
+			margin-bottom: 10px
+		.inst_social
+			display: flex
+			margin-bottom: 20px
+		.mail_social
+			display: flex
+			margin-bottom: 10px
+		.be_social
+			display: flex
+			margin-bottom: 10px
+		a 
+			margin-right: em(10px)
+			.fa 
+				font-size: em(20px)
+				background: linear-gradient( #ffffff, #9d40bf);
+				color: transparent
+				-webkit-background-clip: text
+		p 
+			text-transform: uppercase
+			span
+				margin-left: 5px
+
+/* -----------PORTFOLIO---------- */
+
+.grid-item
+	width: 25%
+	padding: 0
+	margin: 0
+	background-color: #000
+	position: relative
+	.cover-item-gallery
+		background-color: $accent
+		position: absolute
+		width: 100%
+		top: 0
+		bottom: 0
+		opacity: .6
+		display: none
+		a
+			width: 100%
+			height: 100%
+			display: block
+			.fa 
+				position: absolute
+				top: em(8px)
+				right: em(8px)
+			.h2
+				position: absolute
+				bottom: em(8px)
+				left: em(8px)
+				color: #fff
+				text-transform: uppercase
+				font-size: 14px
+				font-family: oswaldRegular
+
+	img 
+		width: 100%
+		height: auto
+
+
+/* -----------MODEL PAGE---------- */
+.s-model_info
+	display: flex
+	justify-content: center
+	margin-top: 80px
+	.back
+		width: 33.3333333%
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		a
+			font-size: em(20px)
+			text-transform: uppercase
+			font-family: oswaldRegular
+			text-align: center
+			letter-spacing: 2px
+			img 
+				transform: rotate(180deg)
+				padding-top: 5px
+				padding-left: 10px
+	.model_view
+		width: 33.3333333%
+		img 
+			max-width: 100%
+	.info_about
+		width: 33.3333333%
+		display: flex
+		justify-content: flex-end
+		align-items: flex-end
+		margin-bottom: 60px
+		text-transform: uppercase
+		letter-spacing: 2px
+		font-size: em(20px)
+		padding-right: em(60px)
+		a 
+			padding: 8px 15px
+			border: 1px dashed #ffffff
+
+.s-carousel
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	margin-bottom: 40px
+	.items
+		height: 10rem
+		padding: 1rem
+		img
+			width: 100%
+.slick 
+	&-next,&-prev 
+		top: -10%
+		right: 5%
+	&-prev 
+		left: 86%
+
+
+
+/* ----------FOOTER----------- */
+footer
+	font-family: oswaldLight
+	text-transform: uppercase
+	text-align: center
+	background-color: #000000
+	.section_footer
+		width: 100%
+		background-color: rgba(#ffffff, .05)
+		padding: 10px 0
+
+
+
+
+@import "media" // Always at the end

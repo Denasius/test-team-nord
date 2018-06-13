@@ -1,0 +1,147 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+// ≥992px
++media-breakpoint-down(md)
+	header
+		.d-info
+			flex-direction: column
+			&_about
+				width: 100%
+				justify-content: flex-start
+				.h1
+					font-size: em(25px)
+				.retoucher
+					font-size: em(15px)
+				.be 
+					font-size: em(15px)
+					span 
+						&:before
+							top: 6px
+							width: 5px
+				a 
+					padding-bottom: em(3px)
+					i 
+						font-size: em(15px)
+			&_nav 
+				width: 100%
+				display: flex
+				justify-content: flex-start
+				nav 
+					ul
+						li 
+							&:first-child
+								margin-left: 0
+
+// ≥768px
++media-breakpoint-down(sm)
+	.s-contacts
+		flex-direction: column
+		align-items: center
+		.send_me
+			margin-bottom: 60px
+	.fotorama__nav__frame
+		width: 130px
+
+// ≥576px
++media-breakpoint-down(xs)
+	header, footer
+		.d-info
+			&_about
+				.h1
+					font-size: em(20px)
+				.retoucher
+					margin-right: em(15px)
+					font-size: em(12px)
+				.be 
+					font-size: em(12px)
+					span 
+						&:before 
+							display: none
+				a 
+					i 
+						font-size: em(12px)
+			&_nav 
+				nav 
+					ul 
+						li 
+							a 
+								font-size: em(14px)
+	.s-contacts
+		.send_me
+			.send
+				font-size: em(16px)
+			form 
+				width: 100%
+				input
+					padding: 6px
+					font-size: em(12px)
+				textarea
+					padding: 6px
+					font-size: em(12px)
+				button
+					font-size: em(16px)
+					padding: 8px 20px
+		.contact_me
+			.contact
+				font-size: em(16px)
+			a 
+				.fa 
+					font-size: em(16px)
+			p 
+				font-size: em(12px)
+	footer 
+		font-size: em(12px)
+		.d-info
+			&_about
+				.retoucher
+					display: none
+				.be 
+					display: none
+	.grid-item
+		.cover-item-gallery
+			a 
+				.h2
+					font-size: em(8px)
+	.comments
+		&_div
+			.text
+				font-size: em(12px)
+			.info
+				flex-direction: column
+				align-items: flex-end
+				#name, #e-mail
+					font-size: em(12px)
+				#name
+					&:after
+						display: none
+
+	.s-reviews .comments .more #more_reviews
+		font-size: em(16px)
+
+	.s-reviews .comments .more #more_reviews::before
+		font-size: em(12px)
+		right: -15px
+		top: 15%
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
