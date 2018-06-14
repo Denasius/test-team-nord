@@ -414,10 +414,24 @@ a
 			width: 100%
 .slick 
 	&-next,&-prev 
-		top: -10%
+		
 		right: 5%
 	&-prev 
+		top: -15%
 		left: 86%
+		background-image: url("../img/play-button.png");
+		background-repeat: no-repeat
+		background-position: center center
+		transform: rotate(180deg)
+		&:before 
+			content: ''
+	&-next 
+		top: -10%
+		background-image: url("../img/play-button.png");
+		background-repeat: no-repeat
+		background-position: center center
+		&:before 
+			content: ''
 
 
 
