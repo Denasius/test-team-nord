@@ -36,7 +36,16 @@ $(function() {
 		slidesToShow: 4,
 		slidesToScroll: 4,
 		dots: false,
-		speed: 300
+		speed: 300,
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll:2
+				}
+			}
+		]
 	});
 		
 });

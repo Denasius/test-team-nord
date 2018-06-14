@@ -53,8 +53,10 @@
 	header, footer
 		.d-info
 			&_about
+				justify-content: center
+				align-items: center
 				.h1
-					font-size: em(20px)
+					font-size: em(16px)
 				.retoucher
 					margin-right: em(15px)
 					font-size: em(12px)
@@ -69,9 +71,14 @@
 			&_nav 
 				nav 
 					ul 
-						li 
+						li
+							margin-left: 0 
 							a 
-								font-size: em(14px)
+								font-size: em(10px)
+	.s-reviews
+		.review
+			margin-left: em(25px)
+
 	.s-contacts
 		.send_me
 			.send
@@ -103,12 +110,15 @@
 					display: none
 				.be 
 					display: none
+				a 
+					display: none
 	.grid-item
 		.cover-item-gallery
 			a 
 				.h2
 					font-size: em(8px)
 	.comments
+		flex-direction: column
 		&_div
 			.text
 				font-size: em(12px)
@@ -129,8 +139,66 @@
 		right: -15px
 		top: 15%
 
+	.s-reviews .comments_div
+		width: 100%
 
+	.fotorama__nav
+		&-wrap
+			display: none
 
+	.s-model_info
+		flex-direction: column
+		align-items: center
+		margin-top: em(10px)
+		.back
+			display: inline-block
+			width: 100%
+			text-align: center
+			margin-bottom: em(10px)
+			a 
+				font-size: em(12px)
+				img 
+					padding-left: 0
+					width: 3.8%
+		.info_about
+			width: 100%
+			margin-left: em(17px)
+			margin-top: em(18px)
+			a 
+				font-size: em(12px)
+	.s-carousel
+		.items
+			height: 5rem
+			margin-top: em(20px)
+
+	.slick
+		&-next, &-prev
+			right: 2%
+		&-prev
+			left: 70% 
+		&-next
+			top: -6%
+
+	.about-info 
+		margin-top: 0
+		width: 100%
+		p
+			font-size: em(12px)
+	.s-contacts
+		margin: 0
+		margin-bottom: em(10px)
+		width: 100%
+		.send_me
+			margin-right: 0
+			width: 100%
+		.contact_me
+			width: 100%
+			.inst_social
+				width: 100%
+			.mail_social
+				width: 100%
+			.be_social
+				width: 100%
 
 /*==========  Mobile First  ==========*/
 
